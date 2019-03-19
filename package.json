@@ -10,10 +10,10 @@
     "url": "https://github.com/Esri/esri-leaflet-vector/issues"
   },
   "dependencies": {
-    "esri-leaflet": "^2.1.2",
-    "leaflet": "^1.0.0",
-    "mapbox-gl": "git+https://github.com/Esri/mapbox-gl-js.git#indexed-vector-sources",
-    "mapbox-gl-leaflet": "0.0.3"
+    "esri-leaflet": "^2.2.3",
+    "leaflet": "^1.4.0",
+    "mapbox-gl": "^0.53.1",
+    "mapbox-gl-leaflet": "0.0.4"
   },
   "devDependencies": {
     "gh-release": "^2.0.0",
