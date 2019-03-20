@@ -1,4 +1,22 @@
-# Esri Leaflet Vector Tile Plugin
+# CityOfPhiladelphia's fork of Esri Leaflet Vector Tile Plugin
+
+This was forked from [esri-leaflet-vector](https://github.com/Esri/esri-leaflet-vector) on 3/19/2019 by Andy Rothwell.  It is no longer updated regularly by Esri, and one of the dependencies of it's dependencies, [static-eval](https://www.npmjs.com/package/static-eval), was being pulled in as a very old version and it was a security risk according to GitHub.
+
+In package.json the following dependencies were updated:
+* esri-leaflet ^2.1.2 => esri-leaflet ^2.2.3
+* leaflet ^1.0.0 => leaflet ^1.4.0
+* mapbox-gl "git+ https://github.com/Esri/mapbox-gl-js.git#indexed-vector-sources" => mapbox-gl ^0.53.1
+* mapbox-gl-leaflet 0.0.3 => 0.0.4
+
+This package is a dependency of [L.esri.WebMap](https://github.com/CityOfPhiladelphia/L.esri.WebMap), which is
+a dependency of [phila-vue-mapping](https://github.com/CityOfPhiladelphia/phila-vue-mapping).
+
+[L.esri.WebMap](https://github.com/CityOfPhiladelphia/L.esri.WebMap) is used by [layerboard](https://github.com/CityOfPhiladelphia/layerboard)
+to create an app out of an AGO Webmap.
+
+
+
+-----------------------------------------------------------------------------
 
 [![npm version][npm-img]][npm-url]
 [![apache licensed](https://img.shields.io/badge/license-Apache-green.svg?style=flat-square)](https://raw.githubusercontent.com/Esri/esri-leaflet-vector/master/LICENSE)
@@ -10,11 +28,11 @@
 
 ## Disclaimer
 
-The code here is a house of cards that attempts to synchronize a [WebGLRenderingContext](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext) with a Leaflet map. 
+The code here is a house of cards that attempts to synchronize a [WebGLRenderingContext](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext) with a Leaflet map.
 
-* It doesn't support rotation 
+* It doesn't support rotation
 * It can't draw more than one vector tile source at a time.
-* `404`s will be encountered when zooming in past zoom level 15 in areas without much feature density. 
+* `404`s will be encountered when zooming in past zoom level 15 in areas without much feature density.
 
 For production applications, the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/latest/sample-code/layers-vectortilelayer/index.html) is a **much** more appropriate choice.
 
